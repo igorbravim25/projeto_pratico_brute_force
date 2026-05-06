@@ -4,15 +4,15 @@
 ---
 
 ## 🚀Tecnologias e Ferramentas
-Kali Linux: Sistema operacional para testes de invasão. (versão 2026.1)
+*Kali Linux: Sistema operacional para testes de invasão. (versão 2026.1)
 
-Metasploitable 2: Máquina virtual propositalmente vulnerável (Alvo). (Last Update: 2019-08-19)
+*Metasploitable 2: Máquina virtual propositalmente vulnerável (Alvo). (Last Update: 2019-08-19)
 
-Oracle VM VirtualBox: Gerenciador de virtualização.
+*Oracle VM VirtualBox: Gerenciador de virtualização.
 
-Nmap: Ferramenta de varredura e reconhecimento de rede.
+*Nmap: Ferramenta de varredura e reconhecimento de rede.
 
-Medusa: Ferramenta de força bruta (brute-force) modular e paralela.
+*Medusa: Ferramenta de força bruta (brute-force) modular e paralela.
 
 ---
 
@@ -33,9 +33,9 @@ Solução: Removi a controladora SATA e adicionei o disco a uma Controladora IDE
 Reconhecimento de Rede:
 Utilizei o nmap para identificar o IP do alvo e os serviços ativos:
 
-------------------------------------------
+=========================================
 nmap -v -sn 192.168.56.100-200 | grep 192 
-------------------------------------------
+=========================================
 
 Três resultados foram encontrados:
 
@@ -69,11 +69,13 @@ Todas as três portas estavam abertas e vulneráveis a ataques.
 Para iniciar o ataque, defini duas wordlists para testes de usuários e senhas comuns para logins 
 
 Para usuários:
+
 -------------------------------------------------
 echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
 -------------------------------------------------
 
 Para senhas:
+
 -----------------------------------------------
 echo -e "123456\npassword\nmsfadmin" > pass.txt  
 -----------------------------------------------
