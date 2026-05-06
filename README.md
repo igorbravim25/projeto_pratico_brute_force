@@ -40,7 +40,9 @@ nmap -v -sn 192.168.56.100-200 | grep 192
 Três resultados foram encontrados:
 
 192.168.56.100: Por padrão no VirtualBox, o IP final .100 é reservado para o Servidor DHCP interno, portanto, não nos interessa.
+
 192.168.56.101: O IP .101 é o nosso alvo Metasploitable, confirmado no próprio terminal do mesmo.
+
 192.168.56.102: IP do próprio Kali linux, também não nos interessa. 
 
 ---
@@ -63,7 +65,7 @@ Todas as três portas estavam abertas e vulneráveis a ataques.
 
 ---
 
-## 🎯Ataque de Força Bruta (FTP`) 
+## 🎯Ataque de Força Bruta (FTP) 
 Para iniciar o ataque, defini duas wordlists para testes de usuários e senhas comuns para logins 
 
 Para usuários:
